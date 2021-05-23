@@ -9,13 +9,12 @@ import (
 	"log"
 	"os"
 
-	"github.com/poolqa/CgbiPngFix/ipaPng"
+	"github.com/iineva/CgbiPngFix/ipaPng"
 )
 
 type CommandOptions struct {
 	Output string
-	Input string
-
+	Input  string
 }
 
 var ShowHelper bool
@@ -32,7 +31,6 @@ func init() {
 	// 改变默认的 Usage，flag包中的Usage 其实是一个函数类型。这里是覆盖默认函数实现，具体见后面Usage部分的分析
 	flag.Usage = usage
 }
-
 
 func usage() {
 	fmt.Fprintf(os.Stderr, `ios png fix version: v0.0.1
